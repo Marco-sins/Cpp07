@@ -44,7 +44,7 @@ Array<T> &Array<T>::operator=(const Array &copy)
 template <typename T>
 T &Array<T>::operator[](unsigned int index) const
 {
-    if (index >= this->_size)
+    if (index >= this->_size || index < 0)
         throw OutOfBoundsException();
     return this->_array[index];
 }
